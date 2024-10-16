@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>tech_bytes_demo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\tech_bytes_demo.Domain\tech_bytes_demo.Domain.csproj" />
+    <ProjectReference Include="..\tech_bytes_demo.TestBase\tech_bytes_demo.TestBase.csproj" />
+  </ItemGroup>
+
+</Project>
