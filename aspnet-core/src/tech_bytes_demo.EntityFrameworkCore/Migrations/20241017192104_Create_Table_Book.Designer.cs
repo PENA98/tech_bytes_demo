@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using tech_bytes_demo.EntityFrameworkCore;
@@ -12,9 +13,11 @@ using tech_bytes_demo.EntityFrameworkCore;
 namespace tech_bytes_demo.Migrations
 {
     [DbContext(typeof(tech_bytes_demoDbContext))]
-    partial class tech_bytes_demoDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241017192104_Create_Table_Book")]
+    partial class Create_Table_Book
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
