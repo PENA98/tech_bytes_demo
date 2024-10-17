@@ -22,6 +22,4 @@ public class Book : AuditedAggregateRoot<Guid>, IMultiTenant
         Id = id;
         TenantId = tenantId;
     }
-
-
 }
