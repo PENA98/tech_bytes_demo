@@ -30,32 +30,62 @@
   <ng-template #abpHeader>
     <h3>
       <i class="fa fa-plus"></i>
-      {{ ':Books:NewBook' | abpLocalization }}
+      {{ '::Books:NewBook' | abpLocalization }}
     </h3>
   </ng-template>
 
   <ng-template #abpBody>
     <form [formGroup]="form" class="d-flex flex-column gap-3" (ngSubmit)="createBook()">
       <div>
-        <label for="identifier">{{ '::Masters:Docks:Form:Number' | abpLocalization }}</label>
-        <input
-          type="text"
-          class="form-control"
-          id="identifier"
-          formControlName="identifier"
-          [placeholder]="getLocaleString('Masters:Docks:Placeholder:Number')"
-        />
-      </div>
-      <div>
-        <label for="description">
-          {{ '::Masters:Docks:Form:Label' | abpLocalization }}
+        <label for="title">
+          {{ '::Books:Title' | abpLocalization }}
         </label>
         <input
           type="text"
           class="form-control"
-          id="description"
-          formControlName="description"
-          [placeholder]="getLocaleString('Masters:Docks:Placeholder:Label')"
+          id="title"
+          formControlName="title"
+          [placeholder]="'::Books:Title' | abpLocalization"
+        />
+      </div>
+      <div>
+        <label for="author">{{ '::Books:Author' | abpLocalization }}</label>
+        <input
+          type="text"
+          class="form-control"
+          id="author"
+          formControlName="author"
+          [placeholder]="'::Books:Author' | abpLocalization"
+        />
+      </div>
+      <div>
+        <label for="isbn">{{ '::Books:ISBN' | abpLocalization }}</label>
+        <input
+          type="text"
+          class="form-control"
+          id="isbn"
+          formControlName="isbn"
+          [placeholder]="'::Books:ISBN' | abpLocalization"
+        />
+      </div>
+      <div>
+        <label for="publishedDate">{{ '::Books:PublishDate' | abpLocalization }}</label>
+        <input
+          type="date"
+          class="form-control"
+          id="publishedDate"
+          formControlName="publishedDate"
+          [placeholder]="'::Books:PublishDate' | abpLocalization"
+        />
+      </div>
+      <div>
+        <label for="pages">{{ '::Books:PagesNumber' | abpLocalization }}</label>
+        <input
+          type="number"
+          class="form-control"
+          id="pages"
+          formControlName="pages"
+          [placeholder]="'::Books:PagesNumber' | abpLocalization"
         />
       </div>
     </form>
@@ -65,7 +95,7 @@
     <button type="button" class="btn btn-secondary" abpClose>
       {{ '::General:Cancel' | abpLocalization }}
     </button>
-    <button type="button" class="btn btn-primary" (click)="processForm()">
+    <button type="button" class="btn btn-primary" (click)="createBook()">
       {{ '::General:Save' | abpLocalization }}
     </button>
   </ng-template>

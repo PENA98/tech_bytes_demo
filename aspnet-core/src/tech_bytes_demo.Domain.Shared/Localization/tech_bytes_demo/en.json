@@ -6,9 +6,16 @@
     "Welcome": "Welcome",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
     "Menu:Books": "Books",
-    "Books:Name": "Name",
+    "Books:Title": "Title",
     "Books:Author": "Author",
     "Menu:Add:Book": "Add Book",
-    "Books:NewBook": "New Book"
+    "Books:NewBook": "New Book",
+    "General:Cancel": "Cancel",
+    "General:Save": "Save",
+    "Invalid:Form": "Invalid form",
+    "Successfully:Created": "Successfully created",
+    "Books:ISBN": "ISBN",
+    "Books:PublishDate": "Published Date",
+    "Books:PagesNumber": "Pages"
   }
 }
