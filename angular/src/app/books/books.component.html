@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="p-3 text-center">
+    <h1>{{ '::Menu:Books' | abpLocalization }}</h1>
+  </div>
+  <div class="d-flex mb-2 align-items-center gap-2 flex-wrap">
+    <abp-button
+      class="ms-auto"
+      buttonClass="btn btn-primary"
+      iconClass="fa fa-plus"
+      (click)="openCreateModal()"
+    >
+      {{ '::Menu:Add:Book' | abpLocalization }}
+    </abp-button>
+  </div>
+
+  <ngx-datatable
+    class="material"
+    [rows]="rows"
+    [columns]="columns"
+    columnMode="force"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    rowHeight="auto"
+    [limit]="10"
+  >
+  </ngx-datatable>
+</div>
+
+<abp-modal [(visible)]="isModalOpen" [options]="modalOptions">
+  <ng-template #abpHeader>
+    <h3>
+      <i class="fa fa-plus"></i>
+      {{ ':Books:NewBook' | abpLocalization }}
+    </h3>
+  </ng-template>
+
+  <ng-template #abpBody>
+    <form [formGroup]="form" class="d-flex flex-column gap-3" (ngSubmit)="createBook()">
+      <div>
+        <label for="identifier">{{ '::Masters:Docks:Form:Number' | abpLocalization }}</label>
+        <input
+          type="text"
+          class="form-control"
+          id="identifier"
+          formControlName="identifier"
+          [placeholder]="getLocaleString('Masters:Docks:Placeholder:Number')"
+        />
+      </div>
+      <div>
+        <label for="description">
+          {{ '::Masters:Docks:Form:Label' | abpLocalization }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          formControlName="description"
+          [placeholder]="getLocaleString('Masters:Docks:Placeholder:Label')"
+        />
+      </div>
+    </form>
+  </ng-template>
+
+  <ng-template #abpFooter>
+    <button type="button" class="btn btn-secondary" abpClose>
+      {{ '::General:Cancel' | abpLocalization }}
+    </button>
+    <button type="button" class="btn btn-primary" (click)="processForm()">
+      {{ '::General:Save' | abpLocalization }}
+    </button>
+  </ng-template>
+</abp-modal>

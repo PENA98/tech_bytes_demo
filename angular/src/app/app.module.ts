@@ -29,13 +29,11 @@ import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
     AppRoutingModule,
     CoreModule,
     ThemeSharedModule,
-    
-    
-    
+
     InternetConnectionStatusComponent,
-                   ThemeLeptonXModule.forRoot(),
-                   SideMenuLayoutModule.forRoot(),
-                   AccountLayoutModule.forRoot(),
+    ThemeLeptonXModule.forRoot(),
+    SideMenuLayoutModule.forRoot(),
+    AccountLayoutModule.forRoot(),
   ],
   declarations: [AppComponent],
   providers: [

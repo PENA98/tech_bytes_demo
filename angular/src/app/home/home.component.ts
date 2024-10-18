@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  starterLinkTemplate: any;
   get hasLoggedIn(): boolean {
     return this.authService.isAuthenticated;
   }
